@@ -9147,3 +9147,52 @@ button:not(:disabled):active {
   0%, 55% { left: -120%; }
   75%, 100% { left: 140%; }
 }
+
+
+/* =========================================================
+   PAGE SCROLL FIX
+   Keep scrollbar inside the application content area
+   ========================================================= */
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  overflow: hidden;
+}
+
+.app-layout {
+  height: 100vh;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.sidebar {
+  height: 100vh;
+  min-height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.main-area {
+  height: 100vh;
+  min-width: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  flex-shrink: 0;
+}
+
+.page-area {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
